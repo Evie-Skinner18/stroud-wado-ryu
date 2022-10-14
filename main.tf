@@ -9,8 +9,10 @@ terraform {
 }
 
 provider "aws" {
-  profile = "default"
+  profile = "261219435789_SandboxUser"
   region  = "eu-west-2"
+  access_key = var.aws_access_id
+  secret_key = var.aws_access_key
 }
 
 resource "aws_instance" "app_server" {
